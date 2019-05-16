@@ -50,4 +50,11 @@ public class Vazen {
     public void setTrvanie(String trvanie) {
         this.trvanie = trvanie;
     }
+
+    public String vypis() {
+        return "ID " + this.getId()
+            + "\nMeno: " + this.getMeno()
+            + "\nTrest: " + this.getTrest()
+            + "\nTrvanie: " + this.getTrvanie();
+    }
 }

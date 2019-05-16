@@ -25,6 +25,8 @@ public final class App {
         logika.novyVazen("Aladeen", "oholenie a odňatie slobody", "1r");
         logika.novyVazen("Kid", "šteklenie", "1x");
 
-        System.out.println(logika.vypisVaznov().toString());
+        System.out.println(logika.vypisVaznov());
+
+        db.close();
     }
 }

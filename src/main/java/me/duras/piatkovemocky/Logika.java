@@ -29,11 +29,7 @@ public class Logika {
     public String vypisVaznov() {
         List<Vazen> vazni = this.dao.getAll();
 
-        return vazni.stream().map((Vazen vzn) ->
-            "ID " + vzn.getId()
-            + "\nMeno: " + vzn.getMeno()
-            + "\nTrest: " + vzn.getTrest()
-            + "\nTrvanie: " + vzn.getTrvanie()
-        ).collect(Collectors.joining("\n---------\n"));
+        return vazni.stream()
+            .map((Vazen vzn) -> vzn.vypis()).collect(Collectors.joining("\n---------\n"));
     }
 }
