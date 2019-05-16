@@ -10,6 +10,9 @@ public class Vazen {
     private String trest;
     private String trvanie;
 
+    public Vazen() {
+    }
+
     public Vazen(String meno, String trest, String trvanie) {
         this.meno = meno;
         this.trest = trest;
