@@ -1,0 +1,16 @@
+{
+    "vazen": [
+        {
+            "id": 1,
+            "meno": "Aladeen",
+            "trest": "oholenie a odňatie slobody",
+            "trvanie": "1r"
+        },
+        {
+            "id": 2,
+            "meno": "Kid",
+            "trest": "šteklenie",
+            "trvanie": "1x"
+        }
+    ]
+}
