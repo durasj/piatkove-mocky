@@ -12,10 +12,14 @@ import org.junit.jupiter.api.Test;
 
 class LogikaTest {
     private Databaza db;
+    private VazenDao vazniDao;
+    private Ministerstvo ministerstvoApi;
 
     @BeforeEach
     void setUp() {
         this.db = new Databaza();
+        this.vazniDao = new VazenDao(db.getJdbcTemplate());
+        this.ministerstvoApi = new Ministerstvo();
     }
 
     @AfterEach
@@ -26,8 +30,6 @@ class LogikaTest {
     @Test
     @DisplayName("Test pridavania novych")
     void novyVazen() throws UnirestException {
-        VazenDao vazniDao = new VazenDao(db.getJdbcTemplate());
-        Ministerstvo ministerstvoApi = new Ministerstvo();
         Logika logika = new Logika(vazniDao, ministerstvoApi);
 
         Vazen vazen = logika.novyVazen("Jano Tester", "odobratie počítača", "1x");
@@ -41,8 +43,6 @@ class LogikaTest {
     @Test
     @DisplayName("Test listovania")
     void vypisVaznov() throws UnirestException {
-        VazenDao vazniDao = new VazenDao(db.getJdbcTemplate());
-        Ministerstvo ministerstvoApi = new Ministerstvo();
         Logika logika = new Logika(vazniDao, ministerstvoApi);
 
         Vazen vazen = logika.novyVazen("Jano Tester", "odobratie počítača", "1x");
